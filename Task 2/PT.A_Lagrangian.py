@@ -46,16 +46,16 @@ def derive_lagrangian():
     
     return mass_matrix, force_vector
 
-print("Equation 1:", eq1)
-print("Equation 2:", eq2)
+    print("Equation 1:", eq1)
+    print("Equation 2:", eq2)
 # Compute mass matrix and force vector
-mass_matrix = sp.Matrix([[sp.diff(eq1, ddtheta1), sp.diff(eq1, ddtheta2)],
+    mass_matrix = sp.Matrix([[sp.diff(eq1, ddtheta1), sp.diff(eq1, ddtheta2)],
                               [sp.diff(eq2, ddtheta1), sp.diff(eq2, ddtheta2)]])
-force_vector = sp.Matrix([eq1, eq2])
+    force_vector = sp.Matrix([eq1, eq2])
     
-print("Mass Matrix:", mass_matrix)
-print("Force Vector:", force_vector)
-return mass_matrix, force_vector
+    print("Mass Matrix:", mass_matrix)
+    print("Force Vector:", force_vector)
+    return mass_matrix, force_vector
 
 if __name__ == "__main__":
     try:
